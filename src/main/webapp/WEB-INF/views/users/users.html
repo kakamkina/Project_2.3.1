@@ -2,7 +2,6 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 
 <head>
-    <!--    <meta charset="IS0-8859-1">-->
     <meta charset="UTF-8"/>
     <title>Users</title>
 </head>
@@ -26,19 +25,16 @@
             <th>City of birth</th>
         </tr>
 
-<tr th:each="user : ${users}">
-    <td><a th:href="@{/users/{id}(id=${user.getId()})}" th:text="${user.getId()}">user</a></td>
-    <td><a th:href="@{/users/{id}(id=${user.getId()})}" th:text="${user.getName()}">user</a></td>
-    <td th:utext="${user.getAge()}"></td>
-    <td th:utext="${user.getCityOfBirth()}"></td>
-    <td><a th:href="@{/users/{id}/edit/(id=${user.getId()})}">Edit</a></td>
+        <tr th:each="user : ${users}">
+            <td><a th:href="@{/users/{id}(id=${user.getId()})}" th:text="${user.getId()}">user</a></td>
+            <td><a th:href="@{/users/{id}(id=${user.getId()})}" th:text="${user.getName()}">user</a></td>
+            <td th:utext="${user.getAge()}"></td>
+            <td th:utext="${user.getCityOfBirth()}"></td>
+            <td><a th:href="@{/users/{id}/edit/(id=${user.getId()})}">Edit</a></td>
 
-</tr>
+        </tr>
     </table>
 </div>
-<!--<a href="/addUser">Add user</a>-->
-<!--<a href="/deleteUser">Delete user</a>-->
-<!--<a href="/modifyUsersData">Modify user's data</a>-->
 </body>
 
 </html>

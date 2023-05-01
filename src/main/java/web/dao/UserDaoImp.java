@@ -29,7 +29,7 @@ public class UserDaoImp {
     @Transactional
     public void createUser(User user) {
         entityManager.createNativeQuery
-        ("INSERT INTO User (name, age, cityOfBirth) VALUES (:name, :age, :cityOfBirth)")
+                        ("INSERT INTO User (name, age, cityOfBirth) VALUES (:name, :age, :cityOfBirth)")
                 .setParameter("name", user.getName())
                 .setParameter("age", user.getAge())
                 .setParameter("cityOfBirth", user.getCityOfBirth())

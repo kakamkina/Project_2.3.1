@@ -7,39 +7,30 @@
 </head>
 
 <body>
-<!--<p>Simple Text Field: <input type="text" th:field="*{textField}"/></p>-->
-<!--<p>User</p>-->
 <p/>
 <div>
     <nobr>
-<!--        @{/{id}(id=${user.getId()})/delete}-->
-<!--        <a href="@{/users/{id}/delete(id=${user.id})}">Delete</a> |-->
-<!--        <a th:href="@{{id}(id=${user.getId})/delete}">Delete</a>-->
-<!--        |-->
-        <a th:href="@{/users/{id}/delete/(id=${user.getId()})}">Delete</a>  |
+        <a th:href="@{/users/{id}/delete/(id=${user.getId()})}">Delete</a> |
         <a th:href="@{/users/{id}/edit/(id=${user.getId()})}">Edit</a>
-<!--        <a th:href="/update">Update</a>-->
     </nobr>
 </div>
 <p/>
 
 <table border="1">
-<tr>
-    <th>Id</th>
-    <th>Name</th>
-    <th>Age</th>
-    <th>City of birth</th>
-</tr>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>City of birth</th>
+    </tr>
 
-<tr>
-<td th:text="${user.getId()}">VALUE</td>
-<td th:text="${user.getName()}">VALUE</td>
-<td th:text="${user.getAge()}">VALUE</td>
-<td th:text="${user.getCityOfBirth()}">VALUE</td>
-</tr>
+    <tr>
+        <td th:text="${user.getId()}">VALUE</td>
+        <td th:text="${user.getName()}">VALUE</td>
+        <td th:text="${user.getAge()}">VALUE</td>
+        <td th:text="${user.getCityOfBirth()}">VALUE</td>
+    </tr>
 </table>
-
-<!--<p>ALL USERS HERE</p>-->
 </body>
 
 </html>
